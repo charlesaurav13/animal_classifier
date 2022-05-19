@@ -1,2 +1,2 @@
 # animal_classifier
- A wbsite to classify the images
+ A website to classify the images
