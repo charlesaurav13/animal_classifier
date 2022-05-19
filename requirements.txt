@@ -1,0 +1,6 @@
+flask
+lobe[tf]
+pymongo
+dnspython
+Jinja2
+wikipedia-api
