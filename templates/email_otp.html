@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+
+    <!-- Our CSS  -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style2.css')}}">
+  </head>
+  <body>
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h5 class="text-white h4">Collapsed content</h5>
+          <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="container"><br>
+        <!-- Instructions -->
+        <div class="row">
+          <div class="alert alert-success col-md-12" role="alert" id="notes">
+            <h4>NOTES</h4>
+            <ul>
+              <li>You will recieve a verification code on your mail after you registered. Enter that code below.</li>
+              <li>If somehow, you did not recieve the verification email then <a href="/resend_otp">resend the verification email</a></li>
+            </ul>
+          </div>
+        </div>
+      <form action="/validate" method="post">
+        <div class="container height-200 d-flex justify-content-center align-items-center">
+          <div class="position-relative">
+              <div class="card p-2 text-center">
+                <!-- msg used in /validate route -->
+                   <h1 style="color: royalblue; font-size:larger;">{{msg}}</h1>
+                   <!-- msg used in /resend_otp route -->
+                   <h2 style="color: royalblue; font-size:larger;">{{resend_otp}}</h2>
+                  <h6>Please enter the one time password <br> to verify your account</h6>
+                  
+                  <div> <span>A code has been sent to</span> <small>{{user_email}}</small> </div>
+                  <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2"> 
+                    <input class="m-2 text-center form-control rounded" name ="number1" type="text" id="first" maxlength="6" /> 
+                  </div>
+                  <div class="mt-4"> <button class="btn btn-danger px-4 validate">Verify</button> </div>
+              </div>
+          </div>
+      </div>
+      </form>
+
+    <!-- Our JavaScript -->
+    <script src="{{url_for('static',filename='js/js1.js')}}"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+
+    </script>
+  </body>
+</html>

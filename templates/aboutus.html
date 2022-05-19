@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>css card hover effects</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/aboutus1.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/aboutus2.css')}}">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="wrapper">
+        <div class="about-section">
+            <h1>About Us Page</h1><br>
+            <p>Our website Imago is an animal image classification website made using machine learning and deep learning</p>
+            <h1>Who we are</h1>
+            <h2>Designers,thinkers and creators</h2>
+        </div>
+        <h1 style="text-align:center"><b>Our Team</b></h1>
+    </header>
+    <br>
+    <div class="cards">
+        <div class="wrapper">
+
+            <div class="card">
+                <img src="{{url_for('static',filename='images/aboutus/saurav1.jpeg')}}">
+                <div class="info">
+                    <h1>Saurav</h1>
+                    <p>Leader of the team who oversaw the whole project progress and even helped in backend development and interlinking of the whole project.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+
+            <div class="card">
+                <img src="{{url_for('static',filename='images/aboutus/abhishek.jpeg')}}">
+                <div class="info">
+                    <h1>Abhishek Raizada</h1>
+                    <p>Worked on the AI-model training along with Saurav and API usage description so the website works and fetches data smoothly.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="card">
+                <img src="{{url_for('static',filename='images/aboutus/nishant.jpeg')}}">
+                <div class="info">
+                    <h1>Nishant Pathak</h1>
+                    <p>Worked on the frontend-part of the website along with khushi to accomplish this wonderful website
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="card">
+                <img src="{{url_for('static',filename='images/aboutus/sahil2.jpeg')}}">
+                <div class="info">
+                    <h1>Sahil Shukla</h1>
+                    <p>Worked on the backend development of the website along with Saurav and by using MongoDB.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="card">
+                <img src="{{url_for('static',filename='images/aboutus/khushi1.jpeg')}}">
+                <div class="info">
+                    <h1>Khushi</h1>
+                    <p>Worked on the front-end part of the website along with nishant and accomplished this website
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

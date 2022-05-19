@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/content.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/aboutus2.css')}}">
+</head>
+<body>
+<div class="wrapper">
+     
+    <div class="card">
+        {% if filename %}
+            <img src="{{ url_for('display_image', filename=filename) }} ">
+        {% endif %}
+        {% if image_name %}
+            <img src="{{ url_for('display_image_url', image_name=image_name) }} ">
+        {% endif %}
+
+
+        <div class="info">
+            <h2>The image predicted is {{name}} with {{confidence}} %confidence</h2><br>
+            <a href="/summary" class="btn">Read More</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
