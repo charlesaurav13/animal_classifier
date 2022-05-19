@@ -26,12 +26,12 @@ def generate_otp():
 
 
 def send_mail(receiver_mail, message):
-    sender_email = "jenniferjeanne123@gmail.com"
-    password = "Rstyr719x03"
+    sender_email = "Your gmail"
+    password = "Your password"
     msg = MIMEMultipart()
     msg["Subject"] = "Email Authentication"
-    msg["From"] = "jenniferjeanne123@gmail.com"
-    msg["To"] = "jenniferjeanne123@gmail.com"
+    msg["From"] = "Your gmail"
+    msg["To"] = "Your gmail"
     message1 = '''Dear User,
     Thank you for visting our website.Use the following OTP to complete your Sign Up procedures. OTP is valid for 5 minutes   '''
     body = message1 + str(message)
